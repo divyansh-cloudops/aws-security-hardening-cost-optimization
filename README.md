@@ -32,18 +32,63 @@ The identified issues were remediated using AWS security best practices includin
 
 ### Project Workflow
 
-```text
-Audit
-  ↓
-Identify Security & Cost Risks
-  ↓
-Remediate
-  ↓
-Validate
-  ↓
-Monitor
-  ↓
-Optimize
+**Audit → Identify → Remediate → Validate → Monitor → Optimize**
 
- 
- 
+---
+
+## 🎯 Project Objectives
+
+- Audit AWS resources for common security misconfigurations
+- Identify IAM users without MFA
+- Review overly permissive IAM policies
+- Apply the principle of least privilege
+- Secure Amazon S3 public access
+- Restrict unnecessary Security Group access
+- Enable EBS encryption
+- Configure AWS Config for compliance monitoring
+- Review CloudTrail logging
+- Analyze AWS cloud spending
+- Configure AWS Budgets
+- Validate security improvements after remediation
+- Improve AWS security posture and cost visibility
+
+---
+
+# 🏗️ AWS Security Architecture
+
+The architecture combines AWS identity, compute, storage, networking, monitoring, security, and cost-management services.
+
+![AWS Security Architecture](Architecture/aws-security-architecture.jpeg)
+
+### Architecture Components
+
+```text
+                         AWS Environment
+                                |
+              +-----------------+-----------------+
+              |                 |                 |
+             IAM               S3                EC2
+              |                 |                 |
+             MFA          Public Access       Security Group
+              |                 |                 |
+              +-----------------+-----------------+
+                                |
+                               EBS
+                                |
+                         Encryption at Rest
+                                |
+                                v
+                         AWS Config
+                                |
+                                v
+                         CloudTrail
+                                |
+                                v
+                    Security Monitoring
+                                |
+                                v
+                     Cost Explorer
+                                |
+                                v
+                         AWS Budgets
+                         
